@@ -25,9 +25,7 @@ h1, h2 {
 
 #border {
 	border-bottom-style: dashed;
-	//border-bottom-width: 0.5em;
 	padding-top: 0.5em;
-	//border-bottom-color: #F0E7D5;
 }
 
 #border-wrapper {
@@ -36,10 +34,28 @@ h1, h2 {
 
 #header {
 	margin: 0;
-	//background-color: #262626;
 
 	img {
 		display: block;
 		margin: auto;
 	}
+
+	.social-media-icon {
+		float: left;
+
+		img {
+			&:hover {
+				width: 80px;
+				height: 80px;
+			}
+		}
+	}
+
+	#social-media-wrapper {
+		display: table;
+		margin: 0 auto;
+		text-align: center;
+		width: auto;
+	}
+
 }

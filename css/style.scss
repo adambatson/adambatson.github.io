@@ -23,11 +23,15 @@ h1, h2 {
 	color: #4286f4;
 }
 
-#header-border {
+#border {
 	border-bottom-style: dashed;
 	//border-bottom-width: 0.5em;
 	padding-top: 0.5em;
 	//border-bottom-color: #F0E7D5;
+}
+
+#border-wrapper {
+	padding: 0.5em;
 }
 
 #header {

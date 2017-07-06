@@ -2,6 +2,7 @@ var upArrow = "\u2191";
 var downArrow = "\u2193";
 
 $(document).ready(function () {
+    //Portfolio accordion
     $(".pf-entry-wrap").each(function(i, obj) {
     	$(this).find(".pf-details-wrap").slideUp(400);
     	$(this).find(".pf-arrow").html(downArrow);
@@ -13,5 +14,21 @@ $(document).ready(function () {
     		});
     	});
     });
-});
 
+    //Contact form
+    $("#contactForm").submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: "https://formspree.io/adamjbatson@gmail.com", 
+            method: "POST",
+            data: $("#contactForm").serialize(),
+            dataType: "json",
+            success: function(data) {
+                console.log(data);
+                $("#contactFormDiv").fadeOut(400);
+                $("#thanksDiv").show();
+            }
+        });
+        return false;
+    });
+});

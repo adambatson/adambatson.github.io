@@ -9,76 +9,17 @@ title: Adam Batson - Software Developer
 	<body>
 		{% include header.html %}
 
-	<h1>About Me</h1>
+		{% include about.html %}
 
-	<p>Adam Batson is a Software Developer residing in Ottawa, Ontario.  A graduate of the Software Engineering program at Carleton University, he combines a passion for technology with critical thinking and software development skills.  He is currently seeking employment as a Software Developer in the Ottawa area.  </p>
+		{% include portfolio.html %}
 
-	<p>Adam has experience developing applications in both web and desktop environments.  Some of his favourite tools include Java, Python, Ruby on Rails, C#, and Git.   He loves experimenting with and learning new tools.  </p>
+		{% include contact.html %}
 
-	<p>Adam was born and raised in the small mining town of Labrador City, Newfoundland and Labrador.  His hobbies include cross country skiing, running, biking, and computer programming.  </p>
+		<div id="border-wrapper">
+			<div id="border" ></div>
+		</div>
 
-	<h1>Portfolio</h1>
-	<h2>Coming Soon</h2>
-
-	<div id="portfolio">
-		<ul>
-			<div class="pf-entry-wrap">
-				<li><h3> Entry 1</h3>
-				<div class="pf-arrow">&#8593</div>
-				<div class="pf-details-wrap">
-					<p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
-					<div class="pf-icons">
-						<img src="/images/github_icon_pf.png" alt="github" >
-						<button type="button">More Info</button>
-					</div>
-				</div>
-				</li>
-			</div>
-			<div class="pf-entry-wrap">
-				<li><h3> Entry 2</h3>
-				<div class="pf-arrow">&#8593</div>
-				<div class="pf-details-wrap">
-					<p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
-					<div class="pf-icons">
-						<img src="/images/github_icon_pf.png" alt="github" >
-						<button type="button">More Info</button>
-					</div>
-				</div>
-				</li>
-			</div>
-			<div class="pf-entry-wrap">
-				<li><h3> Entry 3</h3>
-				<div class="pf-arrow">&#8593</div>
-				<div class="pf-details-wrap">
-					<p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
-					<div class="pf-icons">
-						<img src="/images/github_icon_pf.png" alt="github" >
-						<button type="button">More Info</button>
-					</div>
-				</div>
-				</li>
-			</div>
-		</ul>
-	</div>
-
-	<h1>Contact Me</h1>
-	<h2>Coming soon</h2>
-
-	<form action="https://getsimpleform.com/messages?form_api_token=<form_api_token>" method="post">
-	<fieldset>
-		Name: <input type="text" name="name" /><br/>
-		E-mail: <input type="email" name="email" /><br/>
-		Message:<br/><textarea name="message" cols=70 rows=25/></textarea><br/>
-
-	  <input type='submit' value='Submit' />
-	</fieldset>
-</form>
-
-	<div id="border-wrapper">
-		<div id="border" ></div>
-	</div>
-
-	{% include nav.html %}
+		{% include nav.html %}
 
 	</body>
 </html>

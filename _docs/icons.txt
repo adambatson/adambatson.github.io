@@ -1,5 +1,8 @@
 github
 https://www.iconfinder.com/icons/1298743/github_icon#size=64
 
+github-pf
+https://www.iconfinder.com/icons/211903/github_social_icon#size=32
+
 linkedin
 https://www.iconfinder.com/icons/317725/linkedin_social_icon#size=64

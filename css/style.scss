@@ -86,7 +86,7 @@ h1, h2 {
 }
 
 #portfolio {
-	color: #4286f4;
+	//color: #4286f4;
 	ul {
 		list-style-type: none;
 		padding: 0;
@@ -96,13 +96,14 @@ h1, h2 {
 		
 	}
 	.pf-entry-wrap {
-		//background-color: #1a1a1a;
+		background-color: #4286f4;
+		color: #EEEEEE;
 		margin: 5 0 5 0;
 		position: relative;
 	}
 	p {
 		background-color: #EEEEEE;
-		
+		color: #111111;
 		border-style: solid;
 		border-color: #4286f4;
 		margin-top: 0;
@@ -123,7 +124,7 @@ h1, h2 {
 		display: flex;
 		padding-bottom: 0.5em;
 		button {
-			background-color: #4286f4;
+			background-color: #EEEEEE;
 			
 			height: 32px;
 			box-shadow: none;

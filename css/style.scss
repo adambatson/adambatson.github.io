@@ -5,8 +5,8 @@ body {
 	
 	margin: auto;
 	padding: 0;
-	background-color: #383838;
-	color: #F0E7D5;
+	background-color: #EEEEEE;
+	
 	line-height: 1.4;
 	font-size: 18px;
 	max-width: 700px;
@@ -96,15 +96,15 @@ h1, h2 {
 		
 	}
 	.pf-entry-wrap {
-		background-color: #1a1a1a;
+		//background-color: #1a1a1a;
 		margin: 5 0 5 0;
 		position: relative;
 	}
 	p {
-		background-color: #383838;
-		color: #F0E7D5;
+		background-color: #EEEEEE;
+		
 		border-style: solid;
-		border-color: #1a1a1a;
+		border-color: #4286f4;
 		margin-top: 0;
 		margin-bottom: 0.5em;
 	}
@@ -124,7 +124,7 @@ h1, h2 {
 		padding-bottom: 0.5em;
 		button {
 			background-color: #4286f4;
-			color: #F0E7D5;
+			
 			height: 32px;
 			box-shadow: none;
 			border: 0;

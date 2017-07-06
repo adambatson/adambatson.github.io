@@ -1,11 +1,17 @@
 ---
 ---
+
+//Variables
+$off-white: #EEEEEE;
+$blue: #4286f4;
+$padding-default: 0.5em;
+
 body {
 	font-family: 'Roboto', sans-serif;
 	
 	margin: auto;
 	padding: 0;
-	background-color: #EEEEEE;
+	background-color: $off-white;
 	
 	line-height: 1.4;
 	font-size: 18px;
@@ -20,16 +26,16 @@ body {
 h1, h2 {
 	margin: 0;
 	text-align: center;
-	color: #4286f4;
+	color: $blue;
 }
 
 #border {
 	border-bottom-style: dashed;
-	padding-top: 0.5em;
+	padding-top: $padding-default;
 }
 
 #border-wrapper {
-	padding: 0.5em;
+	padding: $padding-default;
 }
 
 #header {
@@ -48,7 +54,7 @@ h1, h2 {
 				width: 80px;
 				height: 80px;
 			}
-			padding: 0.5em;
+			padding: $padding-default;
 		}
 	}
 
@@ -58,13 +64,13 @@ h1, h2 {
 		text-align: center;
 		width: auto;
 		height: 80px;
-		padding-top: 0.5em;
+		padding-top: $padding-default;
 	}
 
 }
 
 .nav {
-	color: #4286f4;
+	color: $blue;
 	text-align: center;
 	font-size: 1.25em;
 	ul {
@@ -86,7 +92,6 @@ h1, h2 {
 }
 
 #portfolio {
-	//color: #4286f4;
 	ul {
 		list-style-type: none;
 		padding: 0;
@@ -96,18 +101,18 @@ h1, h2 {
 		
 	}
 	.pf-entry-wrap {
-		background-color: #4286f4;
-		color: #EEEEEE;
+		background-color: $blue;
+		color: $off-white;
 		margin: 5 0 5 0;
 		position: relative;
 	}
 	p {
-		background-color: #EEEEEE;
+		background-color: $off-white;
 		color: #111111;
 		border-style: solid;
 		border-color: #4286f4;
 		margin-top: 0;
-		margin-bottom: 0.5em;
+		margin-bottom: $padding-default;
 	}
 	h3 {
 		margin: 0;
@@ -122,9 +127,9 @@ h1, h2 {
 
 	.pf-icons {
 		display: flex;
-		padding-bottom: 0.5em;
+		padding-bottom: $padding-default;
 		button {
-			background-color: #EEEEEE;
+			background-color: $off-white;
 			
 			height: 32px;
 			box-shadow: none;

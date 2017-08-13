@@ -4,9 +4,56 @@ layout: project
 
 # GBTIS
 
+GBTIS (Gesture Based Text Input System) was a capstone project written by myself, Richard Carson, and Max DeMelo.  The system uses a Microsoft Kinect to track
+a users finger-tip and interpret the users hand motions as text, allowing a user to "Write in the air".  The project was completed in fulfilment of SYSC4927 and
+earned our group an A. 
 
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+# Web Service
+A web service is available for remote storage, and management of guestbooks.  The repo is available [here](https://github.com/adambatson/gbtisaas)
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+# Setup
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+The repo provides a solution compatible with microsoft visual studio 2015 and later.  The [Microsoft Kinect SDK](https://developer.microsoft.com/en-us/windows/kinect)
+is also required.  Once the SDK is installed simply import the solution into visual studio and run.  
+
+# Configuration
+
+Configuration is handled through the App.config file, the following parameters can be configured
+* DemoMode 
+	* When DemoMode is set to True the application will exit following every user interaction, this allows GBTIS to be modularized into other applications
+* GBTISaaSAddress 
+	* The address of the web service deployement if applicable
+* AuthorizationKey 
+	* The authorization key used to communicate with the web service deployement if applicable
+
+# Usage
+
+To start the application simply run the executable file produced by Visual Studio.
+
+## The Standby Screen
+
+The Standby Screen is the first screen that will be shown to the user.  On the left hand side a list of names randomly selected from the avtive guestbook is shown.
+The right hand side shows the view from the Kinect camera in order to help orient the user.  The user can begin writing by simply waving as instructed.  
+
+![standby](/images/projects/gbtis/standby.png)
+
+If multiple users are in frame, then the user that waves will become the active user.
+
+## The Canvas
+
+The canvas screen is the main point of user interaction.  When launched the sreen will show a blank canvas with an overlay of the camera feed to help the user orient themself. 
+
+The users writing is interpreted using OCR and the result is shown at the bottom of the screen.
+
+The user can draw by extending two fingers, or erase with an open palm.  A closed fist will show an idle cursor showing the users current position on the canvas.
+
+![idle_canvas](/images/projects/gbtis/Idle_Canvas.png)
+
+![canvasshowingtext](/images/projects/gbtis/canvas_text.png)
+
+The button bar at the top of the screen contains 4 user clickable buttons.  The buttons are activated by hovering over the buttons for 1 second.  The buttons work as follows:
+
+* Help - Activates an animated overlay that explains how to use the system
+* Clear - Resets the canvas to a blank state
+* Cancel - Cancels the user session and returns to the Standby Screen
+* Continue - Saves the current message and returns to the Standby Screen

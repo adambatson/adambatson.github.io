@@ -12,6 +12,10 @@
     <div class="nav">
       <ul>
         <li><a href="/">Home</a></li>
+        {% for entry in page.menu %}
+        <li> | </li>
+        <li><a class="scroll" href="#{{entry.url}}">{{entry.header}}</a></li>
+        {% endfor %}
       </ul>
     </div>
 

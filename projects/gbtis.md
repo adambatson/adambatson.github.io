@@ -1,5 +1,17 @@
 ---
 layout: project
+title: GBTIS
+menu:
+- header: Introduction
+  url: gbtis
+- header: Web Service
+  url: web-service
+- header: Setup
+  url: setup
+- header: Configuration
+  url: configuration
+- header: Usage
+  url: usage
 ---
 
 # GBTIS

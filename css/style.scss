@@ -25,6 +25,27 @@ body {
 		max-width: 700px;
 	}
 
+	.social-media-icon {
+		float: left;
+
+		img {
+			&:hover {
+				width: 80px;
+				height: 80px;
+			}
+			padding: $padding-default;
+		}
+	}
+
+	#social-media-wrapper {
+		display: table;
+		margin: 0 auto;
+		text-align: center;
+		width: auto;
+		height: 80px;
+		padding-top: $padding-default;
+	}
+
 }
 
 h1, h2 {
@@ -48,27 +69,6 @@ h1, h2 {
 	img {
 		display: block;
 		margin: auto;
-	}
-
-	.social-media-icon {
-		float: left;
-
-		img {
-			&:hover {
-				width: 80px;
-				height: 80px;
-			}
-			padding: $padding-default;
-		}
-	}
-
-	#social-media-wrapper {
-		display: table;
-		margin: 0 auto;
-		text-align: center;
-		width: auto;
-		height: 80px;
-		padding-top: $padding-default;
 	}
 
 }

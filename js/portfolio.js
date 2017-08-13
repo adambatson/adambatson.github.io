@@ -1,7 +1,25 @@
 var upArrow = "\u2191";
 var downArrow = "\u2193";
 
+function pageScroll(duration) {
+
+    $('a.scroll').each(function(i, obj) {
+        $(this).on('click', function(event) {
+            var target = $( $(this).attr('href'));
+            if(target.length) {
+                event.preventDefault();
+                $('html, body').animate( {
+                    scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+                }, duration);
+            }
+        });
+    });
+}
+
 $(document).ready(function () {
+    //scrolling
+    pageScroll(450);
+
     //Portfolio accordion
     $(".pf-entry-wrap").each(function(i, obj) {
     	$(this).find(".pf-details-wrap").slideUp(400);

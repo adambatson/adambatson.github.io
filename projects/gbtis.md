@@ -3,7 +3,7 @@ layout: project
 title: GBTIS
 menu:
 - header: Introduction
-  url: gbtis
+  url: introduction
 - header: Web Service
   url: web-service
 - header: Setup
@@ -14,7 +14,7 @@ menu:
   url: usage
 ---
 
-# GBTIS
+# Introduction
 
 GBTIS (Gesture Based Text Input System) was a capstone project written by myself, Richard Carson, and Max DeMelo.  The system uses a Microsoft Kinect to track
 a users finger-tip and interpret the users hand motions as text, allowing a user to "Write in the air".  The project was completed in fulfilment of SYSC4927 and

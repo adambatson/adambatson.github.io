@@ -9,7 +9,8 @@ function pageScroll(duration) {
             if(target.length) {
                 event.preventDefault();
                 $('html, body').animate( {
-                    scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+                    //scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+                    scrollTop: target.offset().top
                 }, duration);
             }
         });

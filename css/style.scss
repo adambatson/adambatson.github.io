@@ -86,6 +86,14 @@ h1, h2 {
 		display: inline;
 
 	}
+	li:after {
+		content: " | ";
+	}
+
+	li:last-child:after {
+		content: "";
+	}
+
 	a {
 		text-decoration: none;
 		color: inherit;

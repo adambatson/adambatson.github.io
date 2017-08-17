@@ -8,6 +8,6 @@ projects:
     earned our group an A.
 
 - title: GBTISAAS
-  url: /gbtisaas
+  url: /projects/gbtisaas
   github: https://github.com/adambatson/gbtisaas
   blurb: Gesture Based Text Input System as A Service  

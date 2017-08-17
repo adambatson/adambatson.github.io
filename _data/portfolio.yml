@@ -1,0 +1,13 @@
+projects:
+- title: GBTIS
+  url: /projects/gbtis
+  github: https://github.com/adambatson/gbtis
+  blurb: >
+    GBTIS (Gesture Based Text Input System) was a capstone project written by myself, Richard Carson, and Max DeMelo.  The system uses a Microsoft Kinect to track
+    a users finger-tip and interpret the users hand motions as text, allowing a user to "Write in the air".  The project was completed in fulfilment of SYSC4927 and
+    earned our group an A.
+
+- title: GBTISAAS
+  url: /projects/gbtisaas
+  github: https://github.com/adambatson/gbtisaas
+  blurb: Gesture Based Text Input System as A Service  

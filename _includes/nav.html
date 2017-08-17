@@ -1,9 +1,7 @@
 <div class="nav">
 	<ul>
-		<li><a href="#">About</a></li>
-		<li> | </li>
-		<li><a href="#">Portfolio</a></li>
-		<li> | </li>
-		<li><a href="#">Contact</a></li>
+		{% for entry in page.menu %}
+        <li><a class="scroll" href="{{entry.url}}">{{entry.header}}</a></li>
+        {% endfor %}
 	</ul>
 </div>

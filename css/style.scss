@@ -133,13 +133,17 @@ h1 {
 	padding-bottom: 50px;
 }
 
-.workplace {
+@mixin infoPanel() {
 	color: black;
     margin: 0 auto;
-    width: 500px;
+    width: 800px;
     background: white;
     border-radius: 10px;
     padding: 10px;
+}
+
+.workplace {
+	@include infoPanel();
 
     .workDate {
     	font-size: 18px;
@@ -154,4 +158,47 @@ h1 {
     p {
     	clear: both;
     }
+}
+
+#portfolio {
+	background-color: #d8d824;
+	padding-bottom: 50px;
+}
+
+.project {
+	@include infoPanel();
+
+	//min-height: 250px;
+	overflow: auto;
+
+	img {
+		width: 250px;
+	}
+}
+
+
+.projectInfo {
+	display: inline-block;
+	width: 65%;
+}
+
+.projectImg {
+	width: 35%;
+}
+
+.projBtns {
+	margin-top: 10px;
+}
+
+@mixin btn() {
+	font-size: 16px;
+	border: 0;
+	box-shadow: none;
+	padding: 5px;
+}
+
+.projectInfoBtn {
+	@include btn();
+	background-color: green;
+	color: white;
 }

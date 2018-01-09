@@ -214,4 +214,25 @@ h1 {
 
 #contactForm {
 	@include infoPanel();
+
+	input {
+	    width: 40%;
+		height: 30px;
+		background-color: #c1c1c1a1;
+		border: none;
+		padding: 5px;
+	}
+
+	.message {
+	    width: 82%;
+	    height: 200px;
+	    margin: auto;
+	    background-color: #c1c1c1a1;
+	    margin-top: 20px;
+	}
+}
+
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  display: block; /* For Firefox */
 }

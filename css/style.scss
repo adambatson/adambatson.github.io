@@ -213,23 +213,46 @@ h1 {
 	text-align: center;
 }
 
+@mixin inputField() {
+	color: #222;
+	font-weight: bold;
+}
+
 #contactForm {
 	@include infoPanel();
 
 	input {
 	    width: 40%;
 		height: 30px;
-		background-color: #c1c1c1a1;
+		background-color: #c1c1c1;
 		border: none;
 		padding: 5px;
 	}
 
+	input::placeholder {
+		@include inputField();
+	}
+
 	.message {
+		@include inputField();
+		-moz-appearance: textfield-multiline;
+    	-webkit-appearance: textarea;
+
 	    width: 82%;
 	    height: 200px;
 	    margin: auto;
-	    background-color: #c1c1c1a1;
+	    background-color: #c1c1c1;
 	    margin-top: 20px;
+	    text-align: left;
+	    padding: 1%;
+	}
+
+	button {
+		@include btn();
+		margin-top: 10px;
+		margin-left: 77%;
+		background-color: #644dec;
+		color: white;
 	}
 }
 

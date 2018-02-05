@@ -149,8 +149,9 @@ h1 {
     }
 
     img {
-    	width: 50px;
-    	float: left;
+    	width: 75px;
+		float: left;
+		margin-right: 10px;
     }
 
     p {
@@ -198,7 +199,7 @@ h1 {
 
 .projectInfoBtn {
 	@include btn();
-	background-color: green;
+	background-color: $blue;
 	color: white;
 }
 

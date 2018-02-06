@@ -146,6 +146,18 @@ h1 {
     padding: 10px;
 }
 
+@mixin standardImg() {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	display: block;
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	@media(max-width: $mobile) {
+		max-width: 160px;
+	}
+}
+
 .workplace {
 	@include infoPanel();
 
@@ -176,13 +188,7 @@ h1 {
 	overflow: auto;
 
 	img {
-		max-width: 400px;
-		margin: 0 auto;
-		@media(max-width: $mobile) {
-			max-width: 160px;
-			margin: 0 auto;
-			margin-left: 60px;
-		}
+		@include standardImg();
 	}
 }
 
@@ -269,3 +275,5 @@ h1 {
 	display: block; /* For Firefox */
 	font-size: $mainFontSize;
 }
+
+{% include css/project.scss %}

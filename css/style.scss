@@ -214,20 +214,11 @@ h1 {
 }
 
 @mixin placeholder() {
-	color: #565656;
+	color: #000;
 }
 
 #contactForm {
 	@include infoPanel();
-
-	input {
-	    width: 40%;
-		height: 5vh;
-		background-color: #c1c1c1;
-		border: none;
-		padding: 5px;
-		font-size: 20px;
-	}
 
 	input::placeholder {
 		@include inputField();
@@ -243,10 +234,22 @@ h1 {
 	    height: 40vh;
 	    margin: auto;
 	    background-color: #c1c1c1;
-	    margin-top: 20px;
+	    margin-top: 18px;
 	    text-align: left;
 	    padding: 1%;
-	    font-size: 20px;
+	    font-size: 18px;
+	}
+
+	.contactInput {
+		@include inputField();
+		display: inline-block;
+		width: 38%;
+		height: 5vh;
+		background-color: #c1c1c1;
+		border: none;
+		padding: 5px;
+		font-size: 20px;
+		text-align: left;
 	}
 
 	button {
@@ -262,5 +265,5 @@ h1 {
 	@include placeholder();
 	content: attr(placeholder);
 	display: block; /* For Firefox */
-	font-size: 20px;
+	font-size: 18px;
 }

@@ -5,6 +5,7 @@ $darkBlue: rgb(1, 1, 140);
 $red: #984447;
 $blue: #2e7bcf;
 $mainFontSize: 1em;
+$mobile: 800px;
 
 * {
 	padding: 0;
@@ -36,6 +37,9 @@ p {
 }
 
 .navList {
+	@media(max-width: $mobile) {
+		display: none;
+	}
 	list-style-type: none;
 	position: absolute;
 	top: 20px;
@@ -79,12 +83,6 @@ p {
     padding-right: 20px;
 }
 
-@media(max-width: 805px) {
-	.navList {
-		display: none;
-	}
-}
-
 #meImg {
 	width: 250px;
 	border-radius: 50%;
@@ -116,7 +114,10 @@ h1 {
 #bio {
 	text-align: center;
 	font-size: $mainFontSize;
-	max-width: 700px;
+	max-width: 50%;
+	@media(max-width: $mobile) {
+		max-width: 90%;
+	}
 	margin: auto;
 
 	p {
@@ -136,7 +137,10 @@ h1 {
 @mixin infoPanel() {
 	color: black;
     margin: 0 auto;
-    width: 800px;
+	width: 50%;
+	@media(max-width: $mobile) {
+		width: 80%;
+	}
 	border-radius: 10px;
 	border: 5px solid $blue;
     padding: 10px;
@@ -172,20 +176,14 @@ h1 {
 	overflow: auto;
 
 	img {
-		width: 400px;
+		max-width: 400px;
 		margin: 0 auto;
+		@media(max-width: $mobile) {
+			max-width: 160px;
+			margin: 0 auto;
+			margin-left: 60px;
+		}
 	}
-}
-
-
-.projectInfo {
-	/* display: inline-block;
-	width: 65%; */
-}
-
-.projectImg {
-	width: 400px;
-	margin: 0 auto;
 }
 
 .projBtns {
@@ -213,6 +211,7 @@ h1 {
 @mixin inputField() {
 	color: #222;
 	font-weight: bold;
+	font-size: $mainFontSize;
 }
 
 @mixin placeholder() {
@@ -238,8 +237,10 @@ h1 {
 	    background-color: #c1c1c1;
 	    margin-top: 18px;
 	    text-align: left;
-	    padding: 1%;
-	    font-size: $mainFontSize;
+		padding: 1%;
+		@media(max-width: $mobile) {
+			width: 88%;
+		}
 	}
 
 	.contactInput {
@@ -250,7 +251,6 @@ h1 {
 		background-color: #c1c1c1;
 		border: none;
 		padding: 5px;
-		font-size: $mainFontSize;
 		text-align: left;
 	}
 

@@ -34,6 +34,25 @@ p {
 	font-size: 1.4em;
 	padding: 20px;
 	color: #eeeeee;
+
+	div {
+		max-width: 50%;
+		margin: auto;
+		margin-bottom: 20px;
+
+		.headerTitle {
+			float: left;
+		}
+
+		@media(max-width: $mobile) {
+			max-width: 90%;
+		}
+
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+	}
 }
 
 .navList {
@@ -41,10 +60,11 @@ p {
 		display: none;
 	}
 	list-style-type: none;
-	position: absolute;
-	top: 20px;
-	right: 1;
-	padding-right: 20px;
+	// position: absolute;
+	// top: 20px;
+	// right: 1;
+	// padding-right: 20px;
+	float: right;
 
 	li {
 		display: inline-block;
@@ -58,6 +78,10 @@ p {
 		a:hover {
 			background-color: rbg(78,78,154);
 		}
+	}
+
+	img {
+		width: 32px;
 	}
 }
 

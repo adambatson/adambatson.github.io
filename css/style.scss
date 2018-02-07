@@ -209,7 +209,6 @@ h1 {
 }
 
 #contact {
-	padding-bottom: 100px;
 	text-align: center;
 }
 
@@ -277,10 +276,15 @@ h1 {
 
 #footer {
 	background-color: $blue;
-	font-size: 1.4em;
+	font-size: 1em;
 	padding: 20px;
 	color: #eeeeee;
 	text-align: center;
+	margin-top: 25px;
+
+	ul {
+		margin-top: 10px;
+	}
 
 	li {
 		display: inline-block;

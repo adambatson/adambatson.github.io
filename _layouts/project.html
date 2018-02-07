@@ -2,29 +2,13 @@
 ---
 
 <html>
-  <head>
-    {% include head.html %}
-  </head>
-
-  <body>
-    <!-- {% include header.html %} -->
-
-    <h1>{{page.title}}</h1>
-
-    {% include nav.html %}
-
-    <div id="border-wrapper">
-      <div id="border" ></div>
-    </div>
-
-    {{ content }}
-
-    <div id="border-wrapper">
-      <div id="border" ></div>
-    </div>
-
-
-    {% include nav.html %}
-    
-  </body>
+    <head>
+        {% include head.html %}
+    </head>
+    <body>
+        {% include header.html %}
+        <div id="projectContent">
+            {{ content }}
+        </div>
+    </body>
 </html>

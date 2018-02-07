@@ -1,0 +1,33 @@
+#projectContent {
+
+    text-align: left;
+    margin: auto;
+
+    max-width: 50%;
+    @media(max-width: $mobile) {
+		max-width: 90%;
+	}
+
+    @for $index from 1 to 6 {
+        h#{$index} {
+            text-align: left;
+            padding: 10px 10px 10px 0;
+        }
+    }
+
+    img {
+        @include standardImg();
+        max-width: 800px;
+        @media(max-width: $mobile) {
+            max-width: 320px;
+        }
+    }
+
+    ul {
+        margin-left: 2%;
+
+        ul {
+            margin-left: 2%;
+        }
+    }
+}

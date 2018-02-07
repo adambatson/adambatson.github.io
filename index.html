@@ -1,12 +1,5 @@
 ---
 title: Adam Batson - Software Developer
-menu:
-- header: About Me
-  url: "#about"
-- header: Portfolio
-  url: "#portfolio"
-- header: Contact
-  url: "#contact"
 ---
 <html>
 	<head>
@@ -14,27 +7,60 @@ menu:
 	</head>
 
 	<body>
+		
 		{% include header.html %}
 
-		{% include social_media.html %}
 
-		{% include nav.html %}
-
-		<div id="border-wrapper">
-			<div id="border" ></div>
+		<div id="profileMain">
+			<img id="meImg" src="images/bio-pic.jpg">
+			<h1>Software Developer</h1>
+			<div id="bio">
+				<p>Hi, my name is Adam and I write software.</p>
+				<p>I am a graduate of the Software Engineering program at Carleton University and I am skilled in both web and desktop development. 
+				Some of my favourite tools include Ruby on Rails, Java, C#, Python, Jekyll, Git, and jQuery. </p>
+				<p>Currently living in Ottawa, Ontario I was born and raised in the small mining town of Labrador City, Newfoundland and Labrador. My hobbies include running, hiking, cross country skiing, and reading. </p>
+			</div>
 		</div>
 
-		{% include about.html %}
+		<div id="workExp">
+			<h1>Work Experience</h1>
 
-		{% include portfolio.html %}
+			<div class="workplace">
+				<img src="images/slenke.png">
+				<h2>Slenke Inc. <span class="workDate">September 2017 - Present</span></h2>
+				<h3>Front End Developer</h3>
+				<p>
 
-		{% include contact.html %}
-
-		<div id="border-wrapper">
-			<div id="border" ></div>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum lectus ac diam efficitur rutrum. Proin ornare justo ac tempor feugiat. Morbi viverra felis nisi, vel fringilla felis auctor a. Mauris pulvinar consectetur eros eget aliquam. Phasellus imperdiet magna nibh, eget bibendum tortor auctor vitae. Sed mauris elit, hendrerit vel consectetur at, lacinia non orci. Suspendisse nec dictum libero. Etiam auctor cursus bibendum. Mauris eget lorem purus. </p>
+			</div>
 		</div>
 
-		{% include nav.html %}
+		<div id="portfolio">
+			<h1>Portfolio</h1>
+
+			<div class="project">
+				<div class="projectImg">
+					<img src="images/projects/gbtis/canvas_text.png">
+				</div>
+				<div class="projectInfo" style="float: right;">
+					<h2>GBTIS</h2>
+					<p>GBTIS (Gesture Based Text Input System) was a capstone project written by myself, Richard Carson, and Max DeMelo. The system uses a Microsoft Kinect to track a users finger-tip and interpret the users hand motions as text, allowing a user to "Write in the air". The project was completed in fulfilment of SYSC4927 and earned our group an A.</p>
+					<div class="projBtns">
+						<a href="/projects/gbtis"><button type="button" class="projectInfoBtn">More Info</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="contact">
+			<h1>Contact Me</h1>
+			<form id="contactForm">
+				<div contenteditable="true" class="contactInput" type="text" name="name" placeholder="Your Name"></div>
+				<div contenteditable="true" class="contactInput" type="email" name="email" placeholder="Your email" style="margin-left: 5%;"></div>
+				<div name="message" contenteditable="true" class="message" placeholder="Your Message"></div>
+				<button type="submit">Submit</button>
+			</form>
+		</div>
 
 	</body>
 </html>

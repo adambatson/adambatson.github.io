@@ -60,10 +60,6 @@ p {
 		display: none;
 	}
 	list-style-type: none;
-	// position: absolute;
-	// top: 20px;
-	// right: 1;
-	// padding-right: 20px;
 	float: right;
 
 	li {
@@ -83,28 +79,6 @@ p {
 	img {
 		width: 32px;
 	}
-}
-
-.smNavList {
-	list-style-type:none;
-
-	li {
-		display: inline-block;
-		padding-right: 10px;
-	}
-
-	a {
-		color: inherit;
-		text-decoration: none;
-	}
-}
-
-#navBtn {
-	position: absolute;
-    top: 20;
-    right: 1;
-    display: none;
-    padding-right: 20px;
 }
 
 #meImg {
@@ -299,6 +273,21 @@ h1 {
 	content: attr(placeholder);
 	display: block; /* For Firefox */
 	font-size: $mainFontSize;
+}
+
+#footer {
+	background-color: $blue;
+	font-size: 1.4em;
+	padding: 20px;
+	color: #eeeeee;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		img {
+			width: 32px;
+		}
+	}
 }
 
 {% include css/project.scss %}

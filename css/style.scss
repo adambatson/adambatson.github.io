@@ -6,6 +6,7 @@ $red: #984447;
 $blue: #2e7bcf;
 $mainFontSize: 1em;
 $mobile: 800px;
+$footerHeight: 7vh;
 
 * {
 	padding: 0;
@@ -15,7 +16,14 @@ $mobile: 800px;
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 100%;
+	height: 100%;
 	background-color: #eeeeee;
+}
+
+.container {
+	min-height: 100%;
+	//Footer height minus it's padding and margin
+	margin-bottom: calc(-7vh - 65px);
 }
 
 p {
@@ -227,6 +235,7 @@ h1 {
 	color: #eeeeee;
 	text-align: center;
 	margin-top: 25px;
+	height: 7vh;
 
 	ul {
 		margin-top: 10px;

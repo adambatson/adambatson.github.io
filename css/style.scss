@@ -39,9 +39,11 @@ p {
 		max-width: 50%;
 		margin: auto;
 		margin-bottom: 20px;
+		margin-top: -10px;
 
 		.headerTitle {
 			float: left;
+			margin-top: 0;
 		}
 
 		@media(max-width: $mobile) {

@@ -1,5 +1,3 @@
 # adambatson.github.io
  
- My Portfolio Site, currently in development
- 
- Trying to set up auto deploy
+ My Portfolio Site.  Also hosted at [adambatson.com](http://adambatson.com)

@@ -100,13 +100,16 @@ p:last-child {
 	padding-bottom: 10px;
 }
 
+#imgWrapper {
+	width: 250px;
+	margin: 0 auto;
+}
+
 #meImg {
 	width: 250px;
 	border-radius: 50%;
 	border: 1px solid $blue;
 	display: block;
-	margin: 0 auto;
-	//margin: 0 42% 0 42%; //?????????
 }
 
 .dropdownContent {

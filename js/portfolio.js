@@ -1,53 +1,32 @@
-var upArrow = "\u2191";
-var downArrow = "\u2193";
-
-function pageScroll(duration) {
-
-    $('a.scroll').each(function(i, obj) {
-        $(this).on('click', function(event) {
-            var target = $( $(this).attr('href'));
-            if(target.length) {
-                event.preventDefault();
-                $('html, body').animate( {
-                    //scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-                    scrollTop: target.offset().top
-                }, duration);
-            }
-        });
-    });
+function validateEmail(email) {
+	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(String(email).toLowerCase());
 }
 
-$(document).ready(function () {
-    //scrolling
-    pageScroll(450);
+$(document).ready(function() {
 
-    //Portfolio accordion
-    $(".pf-entry-wrap").each(function(i, obj) {
-    	$(this).find(".pf-details-wrap").slideUp(400);
-    	$(this).find(".pf-arrow").html(downArrow);
-    	$(this).find("h3").each(function(j, h3) {
-    		$(this).on("click", function() {
-    			$(this).siblings(".pf-details-wrap").slideToggle(400);
-	    		var arrow = $(this).siblings(".pf-arrow");
-	    		arrow.text((arrow.text() == upArrow) ? downArrow : upArrow);
-    		});
-    	});
-    });
-
-    //Contact form
-    $("#contactForm").submit(function(e) {
-        e.preventDefault();
-        $.ajax({
-            url: "https://formspree.io/adamjbatson@gmail.com", 
-            method: "POST",
-            data: $("#contactForm").serialize(),
-            dataType: "json",
-            success: function(data) {
-                console.log(data);
-                $("#contactFormDiv").fadeOut(400);
-                $("#thanksDiv").show();
-            }
-        });
-        return false;
-    });
+	$("#contactSubmit").on('click', function(e) {
+		e.preventDefault();
+		if(!validateEmail($(".email").val())) {
+			alert("Please enter a valid email address");
+			$(".email").css("border", "1px solid red");
+			return false;
+		}
+		$(".email").css("border", "0");
+		$.ajax({
+			dataType: 'jsonp',
+			url: "http://getsimpleform.com/messages/ajax?form_api_token=f67041d6f71c5c71a27b72256dbae882",
+			data: {
+				name: $(".name").val(),
+				email: $(".email").val(),
+				message: $(".message").val()
+			},
+			success: function(res) {
+				alert("Thank you for contacting me, I'll be in touch shortly!");
+				$(".name").val("");
+				$(".email").val("");
+				$(".message").val("");
+			}
+		});
+	});
 });

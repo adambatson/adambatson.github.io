@@ -1,0 +1,62 @@
+#contact {
+	text-align: center;
+}
+
+@mixin inputField() {
+	color: #222;
+	font-weight: bold;
+	font-size: $mainFontSize;
+}
+
+@mixin placeholder() {
+	color: #000;
+}
+
+#contactForm {
+	@include infoPanel();
+
+	input::placeholder {
+		@include inputField();
+		@include placeholder();
+	}
+
+	.message {
+		@include inputField();
+
+	    width: 82%;
+	    height: 40vh;
+	    margin: auto;
+	    background-color: #c1c1c1;
+	    margin-top: 18px;
+	    text-align: left;
+        padding: 1%;
+        display: block;
+        border: none;
+        font-size: 1.4em;
+		@media(max-width: $mobile) {
+			width: 88%;
+		}
+	}
+
+	.contactInput {
+		@include inputField();
+		display: inline-block;
+		width: 38.2%;
+		height: 4vh;
+		background-color: #c1c1c1;
+		border: none;
+		padding: 5px;
+        text-align: left;
+        @media(max-width: $mobile) {
+			width: 41%;
+		}
+	}
+
+	button {
+		@include btn();
+		margin-top: 10px;
+		margin-left: 74%;
+		color: #eeeeee;
+		background-color: $blue;
+	}
+}

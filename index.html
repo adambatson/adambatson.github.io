@@ -7,87 +7,8 @@ title: Adam Batson - Software Developer
 	</head>
 
 	<body>
-		
 		{% include header.html %}
-
-
-		<div id="profileMain">
-			<div id="imgWrapper">
-				<img id="meImg" src="images/bio-pic.jpg">
-			</div>
-			<h1>Software Developer</h1>
-			<div id="bio">
-				<p>Hi, my name is Adam and I write software.</p>
-				<p>I am a graduate of the Software Engineering program at Carleton University.  
-				I currently work at Ottawa based startup <a href="https://slenke.com">Slenke Inc</a> where I help build Slenke's web and mobile applications.  
-				</p>
-				<p>I was born and raised in the small mining town of Labrador City, Newfoundland and Labrador. My hobbies include running, hiking, cross country skiing, and reading. </p>
-			</div>
-		</div>
-
-		<div id="workExp">
-			<h1>Work Experience</h1>
-
-			<div class="workplace">
-				<img src="images/slenke.png">
-				<h2><a href="https://slenke.com">Slenke Inc. </a><span class="workDate">September 2017 - Present</span></h2>
-				<h3>Software Developer</h3>
-				<p>
-				<a href="https://slenke.com">Slenke</a> is a collaborative project management sofwtare who's mission is to help create a connected workplace and give people working in it a simpler way to get work done. 
-				</p>
-				<p>
-				I started working at Slenke in September of 2017.  During my time here I've had the pleasure of working on an innovative product and developed proficiencies in CakePHP, jQuery and mobile app development with the Ionic framework.  I've also worked with third party services OneSignal and Stripe, I also oversaw Slenke's integration with the Zapier platform.
-				</p>
-			</div>
-		</div>
-
-		<div id="portfolio">
-			<h1>Portfolio</h1>
-
-			<div class="project">
-				<div class="projectImg">
-					<img src="images/projects/gbtis/canvas_text.png">
-				</div>
-				<div class="projectInfo" style="float: right;">
-					<h2>GBTIS</h2>
-					<p>GBTIS (Gesture Based Text Input System) was a capstone project written by myself, Richard Carson, and Max DeMelo. The system uses a Microsoft Kinect to track a users finger-tip and interpret the users hand motions as text, allowing a user to "Write in the air". The project was completed in fulfilment of SYSC4927 and earned our group an A.</p>
-					<div class="projBtns">
-						<a href="/projects/gbtis"><button type="button" class="projectInfoBtn">More Info</button></a>
-						<a href="https://github.com/adambatson/gbtis"><button type="button" class="projectInfoBtn">View on Github</button></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="project">
-				<div class="projectImg">
-					<img src="images/projects/AMATool/AMATool.png">
-				</div>
-				<div class="projectInfo" style="float: right;">
-					<h2>AMA Tool</h2>
-					<p>
-					A Reddit like Ask Me Anything (AMA) tool written using the Java Spring Framework that allowed users to create and comment on AMA's.
-					</p>
-					<div class="projBtns">
-						<a href="https://github.com/adambatson/SYSC4806-AMA"><button type="button" class="projectInfoBtn">View on Github</button></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="contact">
-			<h1>Contact Me</h1>
-			<p>
-				Use the form below if you'd like to get in touch with me.  I'll get back to you as soon as I can.
-			</p>
-			<form id="contactForm" action="https://getsimpleform.com/messages?form_api_token=f67041d6f71c5c71a27b72256dbae882" method="post">
-				<input class="contactInput name" type="text" name="name" placeholder="Your Name">
-				<input class="contactInput email" type="email" name="email" placeholder="Your email" style="margin-left: 5%;">
-				<textarea name="message" class="message" placeholder="Your Message" data-gramm_editor="false"></textarea>
-				<input type="hidden" name="redirect_to" value="/thanks.html">
-				<button type="submit" id="contactSubmit">Submit</button>
-			</form>
-		</div>
-
+		{% include about.html %}
+		{% include work_experience.html %}	
 	</body>
-	{% include footer.html %}
 </html>

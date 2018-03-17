@@ -49,12 +49,32 @@ p {
 .card {
 	box-shadow: 0 3px 3px 2px rgba(0, 0, 0, 0.05);
 	margin-top: 10px;
-	text-align: center;
 	width: 50%;
 	margin: 10px auto;
 	padding: 10px;
 	img {
 		width: 200px;
 		border-radius: 50%;
+	}
+}
+
+#aboutMe {
+	text-align: center;
+}
+
+.workplace {
+	img {
+		width: 75px;
+		float: left;
+		margin-right: 10px;
+	}
+
+	.workDate {
+		font-size: 1em;
+		float: right;
+	}
+
+	p {
+		clear: both;
 	}
 }

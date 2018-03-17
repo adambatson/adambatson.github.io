@@ -17,7 +17,8 @@ build:
     expire_in: 1 week
 
 deploy:
-  only: master
+  only: 
+    - master
   stage: deploy
   script:
     - whoami

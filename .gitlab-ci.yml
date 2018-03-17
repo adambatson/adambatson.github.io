@@ -1,0 +1,25 @@
+cache:
+  paths:
+    - vendor/ruby
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - chmod +x build.sh
+    - ./build.sh
+  artifacts:
+    paths:
+      - html/*
+    expire_in: 1 week
+
+deploy:
+  only: 
+    - master
+  stage: deploy
+  script:
+    - whoami
+    - scp -r html gitlab@138.197.146.70:/var/www

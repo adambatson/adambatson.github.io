@@ -22,4 +22,4 @@ deploy:
   stage: deploy
   script:
     - whoami
-    - scp -r html gitlab@138.197.146.70:/var/www
+    - scp -r html gitlab@adambatson.com:/var/www

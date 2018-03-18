@@ -124,6 +124,10 @@ p {
 		background-color: white;
 		color: $darkgrey;
 	}
+	
+	ul {
+		margin-left: 15px;
+	}
 }
 
 @mixin inputField() {
